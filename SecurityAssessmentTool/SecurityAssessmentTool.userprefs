@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{AEEF12B2-4F5C-4F57-9F2B-F3528F927CB8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SecurityAssessmentTool/RiskAnalyzer/CodeAnalyzer.cs">
+    <Files>
+      <File FileName="SecurityAssessmentTool/SecurityAssessmentToolUI/Form1.cs" Line="29" Column="1" />
+      <File FileName="SecurityAssessmentTool/RiskAnalyzer/FileSelector.cs" Line="22" Column="37" />
+      <File FileName="SecurityAssessmentTool/InstrumentIntegration/SecurityTool.cs" Line="36" Column="18" />
+      <File FileName="SecurityAssessmentTool/RiskAnalyzer/CodeAnalyzer.cs" Line="65" Column="33" />
+      <File FileName="SecurityAssessmentTool/VRMConnections/RuleExtractor.cs" Line="67" Column="42" />
+      <File FileName="SecurityAssessmentTool/VRMConnections/ValidationSteps.cs" Line="49" Column="14" />
+      <File FileName="SecurityAssessmentTool/SecurityAssessmentToolUI/Form1.resx" Line="1" Column="1" />
+      <File FileName="SecurityAssessmentTool/SecurityAssessmentToolUI/Form1.Designer.cs" Line="81" Column="16" />
+      <File FileName="SecurityAssessmentTool/DataExtractor/sqlVRMExtractor.cs" Line="2" Column="29" />
+      <File FileName="SecurityAssessmentTool/InstrumentIntegration/SecurityData.cs" Line="10" Column="44" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SecurityAssessmentTool PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
