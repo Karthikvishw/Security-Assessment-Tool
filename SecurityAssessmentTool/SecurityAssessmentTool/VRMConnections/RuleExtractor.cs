@@ -51,7 +51,6 @@ namespace SecurityAssessmentTool.VRMConnections
         internal List<string> getAllRules(string PFid)
         {
             List<string> AllRules = new List<string>();
-            AllRules.Add("");
             try
             {
                 sqlVRMreObj.OpenVRM();
@@ -75,5 +74,32 @@ namespace SecurityAssessmentTool.VRMConnections
             return AllRules;
         }
 
+        internal List<string> getAllDelimiters(string DELid)
+        {
+            List<string> AllDelimiter = new List<string>();
+
+            try
+            {
+                sqlVRMreObj.OpenVRM();
+                string queryString = "select d.cDelimiter from VS_Del_rel rel, Delimiter d where rel.cSATDElId=@cSATDElId and rel.cDElId = d.cDElId and "+
+                    "rel.cRCD_Del <> @RCDDel and d.cRCD_Del <> @RCDDel";
+                SqlCommand command = new SqlCommand(queryString, sqlVRMreObj.sqlVRMdb);
+                command.Parameters.AddWithValue("@cSATDElId", DELid);
+                command.Parameters.AddWithValue("@RCDDel", "Y");
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    AllDelimiter.Add(reader["cDelimiter"].ToString());
+                }
+
+            }
+            finally
+            {
+                sqlVRMreObj.OpenVRM();
+            }
+
+            return AllDelimiter;
+        }
     }
 }

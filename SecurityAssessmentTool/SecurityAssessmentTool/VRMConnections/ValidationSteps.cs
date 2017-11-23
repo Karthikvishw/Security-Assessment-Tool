@@ -19,7 +19,7 @@ namespace SecurityAssessmentTool.VRMConnections
             {
                 sqlVRMvsObj.OpenVRM();
                 string queryString = "select FVR.iRuleID, VS.iValidationID, VS.cValidationOrder, VS.cIteration, VS.cValidationIndicator, VS.cRegExp, VS.cScope, VS.cDelimiter" +
-                    "VS.cListIndicator, VS.cListRegExp, VS.cListPrefix, VS.cListSufix"+
+                    "VS.cListIndicator, VS.cListRegExpToMatch, VS.cListRegExpToDecide, VS.cListPrefix, VS.cListSufix"+
                     "from FR_VS_Rel FVR, ValidationStep VS " +
                     "where FVR.iRuleID=@tRule and FVR.iRuleID=VS.iRuleID and FVR.cRCD_Del <> @RCDDel and VS.cRCD_Del <> @RCDDel order by VS.cValidationOrder";
                 
@@ -41,7 +41,8 @@ namespace SecurityAssessmentTool.VRMConnections
                     VS.cScope = reader["cScope"].ToString();
                     VS.cDelimiter = reader["cDelimiter"].ToString();
                     VS.cListIndicator = reader["cListIndicator"].ToString();
-                    VS.cListRegExp = reader["cListRegExp"].ToString();
+                    VS.cListRegExpToMatch = reader["cListRegExpToMatch"].ToString();
+                    VS.cListRegExpToDecide = reader["cListRegExpToDecide"].ToString();
                     VS.cListPrefix = reader["cListPrefix"].ToString();
                     VS.cListSufix = reader["cListSufix"].ToString();
                     strucVS.Add(VS); 

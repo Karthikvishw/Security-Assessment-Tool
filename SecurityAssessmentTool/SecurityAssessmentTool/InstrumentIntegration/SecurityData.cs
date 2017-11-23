@@ -12,7 +12,8 @@ namespace SecurityAssessmentTool
         public string cScope;
         public string cDelimiter;
         public string cListIndicator;
-        public string cListRegExp;
+        public string cListRegExpToMatch;
+        public string cListRegExpToDecide;
         public string cListPrefix;
         public string cListSufix;
     }
